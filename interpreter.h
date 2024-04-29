@@ -17,7 +17,7 @@ inline void handle(std::string line)
 {
     if(line.substr(0, 6) == "print(")
     {
-        std::string arg = line.substr(7, std::size(line)-2);
+        std::string arg = line.substr(7, std::sizeof(line)-2);
         int intArg{std::stoi(arg)};
         print(intArg);
     }
